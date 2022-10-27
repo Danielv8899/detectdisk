@@ -12,12 +12,6 @@ VOID SwapEndianess(PCHAR dest, PCHAR src) {
 	}
 }
 
-VOID dontSwapEndianness(PCHAR dest, PCHAR src) {
-	for (size_t i = 0, l = strlen(src); i < l; i++) {
-		dest[i] = src[i];
-	}
-}
-
 VOID ChangeIoc(PIO_STACK_LOCATION ioc, PIRP irp, PIO_COMPLETION_ROUTINE routine) {
 	PIOC_REQUEST request = (PIOC_REQUEST)ExAllocatePool(NonPagedPool, sizeof(IOC_REQUEST));
 	if (!request) {
