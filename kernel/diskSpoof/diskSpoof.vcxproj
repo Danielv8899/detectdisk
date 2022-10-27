@@ -108,8 +108,8 @@
     <FilesToPackage Include="$(TargetPath)" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="disk.c" />
-    <ClCompile Include="main.c" />
+    <ClCompile Include="disk.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="disk.h" />
