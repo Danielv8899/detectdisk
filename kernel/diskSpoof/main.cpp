@@ -38,6 +38,7 @@ NTSTATUS doHook() {
 	auto status = ObReferenceObjectByName(&diskstr, OBJ_CASE_INSENSITIVE, 0, 0, *IoDriverObjectType, KernelMode, 0, (PVOID*)&diskobj);
 
 	if (!NT_SUCCESS(status) || !diskobj) {
+		DbgPrintEx(DPFLTR_DEFAULT_ID,DPFLTR_ERROR_LEVEL,"%s failed getting disk object\n", DEBUGPRINT);
 		return STATUS_ACCESS_DENIED;
 	}
 
